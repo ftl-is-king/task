@@ -9,7 +9,7 @@ int main()
   char yunsuanfu;
   int a,b;
   float c,d;
-  scanf("%d,%d,%c",&a,&b,&yunsuanfu);
+  scanf("%d %d %c",&a,&b,&yunsuanfu);
   if (yunsuanfu == '+'){
     printf("%d+%d=%d\n",a,b,a+b);
   }
