@@ -4,10 +4,30 @@
 #include <stdio.h>
 int main()
 {
-  //温度转换
-  printf("请输入摄氏温度\n");
-  float sheshidu;
-  scanf("%f",&sheshidu);
-  printf("根据您输入的摄氏温度，对应的华氏温度为%.1f\n",sheshidu*9/5+32);
-  //温度转换
+ int shuru;
+ int i;
+ int j = 0;
+ printf("请输入50以内的正整数\n");
+ scanf("%d",&shuru);
+ for ( i = 1; i < 51; i++)
+ {
+   if(shuru % i == 0)
+    {
+      j++;
+    }
+
+ }
+ if (j == 2 && shuru < 50)
+ {
+   printf("密钥安全，密码设置成功\n");
+ }
+ else if (shuru < 1 || shuru > 50)
+ {
+   printf("你输入的，真的是50以内的正整数吗\n");
+ }
+ else
+ {
+   printf("密钥不安全，请重新输入\n");
+ }
+ return 0;
 }
