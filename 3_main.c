@@ -4,34 +4,31 @@
 #include <stdio.h>
 int main()
 {
-  //简单计算器
-  printf("请输入两个数字，及运算符\n");
-  char yunsuanfu;
-  int a,b;
-  float c,d;
-  scanf("%d %d %c",&a,&b,&yunsuanfu);
-  if (yunsuanfu == '+'){
-    printf("%d+%d=%d\n",a,b,a+b);
-  }
-  else if (yunsuanfu == '-'){
-    printf("%d-%d=%d\n",a,b,a-b);
-  }
-  else if (yunsuanfu == '*'){
-    printf("%d*%d=%d\n",a,b,a*b);
-  }
-  else if (yunsuanfu == '/'){
-    c = a;
-    d = b;
-    if (d == 0)
+ int shuru;
+ int i = 0;
+ int j = 0;
+ printf("请输入50以内的正整数\n");
+ scanf("%d",&shuru);
+ while(i <= 49)
+ {  
+   i = i+1;
+   if(shuru % i == 0)
     {
-      printf("请输入非零除数\n");
+      j++;
     }
-    else{
-      printf("%.0f/%.0f=%f\n",c,d,c/d);
-    }
-  }
-  else{
-    printf("请输入正确的运算符\n");
-  }
-  //简单计算器
+
+ }
+ if (j == 2 && shuru < 50)
+ {
+   printf("密钥安全，密码设置成功\n");
+ }
+ else if (shuru < 1 || shuru > 50)
+ {
+   printf("你输入的，真的是50以内的正整数吗\n");
+ }
+ else
+ {
+   printf("密钥不安全，请重新输入\n");
+ }
+ return 0;
 }
