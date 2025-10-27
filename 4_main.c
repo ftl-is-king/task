@@ -4,16 +4,32 @@
 #include <stdio.h>
 int main()
 {
-  //三角形计算
-  printf("请输入三个整数\n");
-  int x,y,z;
-  scanf ("%d %d %d",&x,&y,&z);
-  if (x+y <= z || x+z <= y || y+z <= x ){
-    printf("不能组成三角形\n");  
-  }
-    else{
-      printf("可以组成三角形\n");
-  }
-   return 0;
-  //三角形计算
+ int i = 0;
+ int huashu[4];
+ int shuzi = 99;
+ char shuzu[4];
+ int sum;
+ int j = 0;
+ while(i < 900)
+ {
+    i++;
+    shuzi++;
+    sprintf(shuzu,"%d",shuzi);
+    sum = (shuzu[0] - '0')*(shuzu[0] - '0')*(shuzu[0] - '0');
+    sum = sum+(shuzu[1] - '0')*(shuzu[1] - '0')*(shuzu[1] - '0');
+    sum = sum+(shuzu[2] - '0')*(shuzu[2] - '0')*(shuzu[2] - '0');
+    if(sum == shuzi)
+    {
+      huashu[j] = shuzi;
+      j++;
+    }
+}
+i = 0;
+while(i < 3 )
+{
+    printf("%d ",huashu[i]);
+    i++;
+}
+printf("%d",huashu[3]);
+ return 0;
 }
