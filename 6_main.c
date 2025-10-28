@@ -5,31 +5,19 @@
 int main()
 {
  int shuzu[5];
- int num = 114514;
- int num2 = 0;
- int i;
- int j = 5;
- int xuhao[5] = {0,1,2,3,4};
- while(num != 0)
+ int j = 0;
+ int i = 0;
+ int shuzi = 0;
+ for ( i = 0; j < 5; i++)
  {
-    for ( i = 0; i < j; i++)
-    {
-        printf("请输入第%d位数\n",xuhao[i]+1);
-        scanf("%d",&shuzu[xuhao[i]]);
-    }
-    j = 0;
-    for ( i = 0; i < 5; i++)
-    {
-     if(shuzu[i] % 2 != 0)
-     {
-        num2++;
-        xuhao[j] = i;
-        j++;
-     }
-    }
-    num = num2;
-    num2 = 0;
-    } 
+   printf("请输入\n");
+   scanf("%d",&shuzi);
+   if (shuzi % 2 == 0)
+   {
+    shuzu[j] = shuzi;
+    j ++;
+   }
+}
  printf("%d %d %d %d %d\n",shuzu[0],shuzu[1],shuzu[2],shuzu[3],shuzu[4]);
  return 0;
 }
