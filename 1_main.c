@@ -1,33 +1,42 @@
 //202510111315
 //715786526@qq.com
 //张福君
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
- int shuru;
- int i;
- int j = 0;
- printf("请输入50以内的正整数\n");
- scanf("%d",&shuru);
- for ( i = 1; i < 51; i++)
+ int shuzu[3][3];
+ int a = -1;
+ int b = 0;
+ int j;
+ for(j = 0;j < 9;j++)
  {
-   if(shuru % i == 0)
-    {
-      j++;
-    }
-
+  if(a < 2)
+  {
+    a++;
+  }
+  scanf("%d",&shuzu[a][b]);
+  if(a == 2)
+  {
+    a = -1;
+    b++;
+  }
  }
- if (j == 2 && shuru < 50)
+ a = -1;
+ b = 0;
+ for(j = 0;j < 9;j++)
  {
-   printf("密钥安全，密码设置成功\n");
- }
- else if (shuru < 1 || shuru > 50)
- {
-   printf("你输入的，真的是50以内的正整数吗\n");
- }
- else
- {
-   printf("密钥不安全，请重新输入\n");
+  if(a < 2)
+  {
+    a++;
+  }
+  printf("%d ",shuzu[a][b]);
+  if(a == 2)
+  {
+    printf("\n");
+    a = -1;
+    b++;
+  }
  }
  return 0;
 }
+
