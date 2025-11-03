@@ -29,7 +29,7 @@ int main()
   {
     a++;
   }
-  printf("%d ",shuzu[a][b]);
+  printf(" %d",shuzu[a][b]);
   if(a == 2)
   {
     printf("\n");
