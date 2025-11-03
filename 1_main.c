@@ -29,7 +29,14 @@ int main()
   {
     a++;
   }
-  printf("%d",shuzu[a][b]);
+  if(b == 3)
+  {
+   printf("%d",shuzu[a][b]);
+  }
+  else
+  {
+   printf("%d ",shuzu[a][b]);
+  }
   if(a == 2)
   {
     printf("\n");
@@ -39,4 +46,3 @@ int main()
  }
  return 0;
 }
-
