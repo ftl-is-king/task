@@ -39,7 +39,7 @@ int main()
   }
   if(a == 2)
   {
-    printf("\n");
+    //printf("\n");
     a = -1;
     b++;
   }
