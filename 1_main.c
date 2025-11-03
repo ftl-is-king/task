@@ -29,7 +29,7 @@ int main()
   {
     a++;
   }
-  if(b == 3)
+  if(a == 2)
   {
    printf("%d",shuzu[a][b]);
   }
@@ -39,7 +39,7 @@ int main()
   }
   if(a == 2)
   {
-    //printf("\n");
+    printf("\n");
     a = -1;
     b++;
   }
