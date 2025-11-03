@@ -1,34 +1,37 @@
 //202510111315
 //715786526@qq.com
 //张福君
-#include <stdio.h>
+//202510111315
+//715786526@qq.com
+//张福君
+#include<stdio.h>
 int main()
 {
- int shuru;
- int i = 0;
- int j = 0;
- printf("请输入50以内的正整数\n");
- scanf("%d",&shuru);
- while(i <= 49)
- {  
-   i = i+1;
-   if(shuru % i == 0)
-    {
-      j++;
-    }
-
- }
- if (j == 2 && shuru < 50)
+ int a;
+ int b[10];
+ int i;
+ int j = 10;
+ for ( i = 0; i < 10; i++)
  {
-   printf("密钥安全，密码设置成功\n");
+  scanf("%d",&b[i]);
  }
- else if (shuru < 1 || shuru > 50)
+ for ( i = 0; i < j-1; i++)
  {
-   printf("你输入的，真的是50以内的正整数吗\n");
+  if(b[i] > b[i+1])
+  {
+   a = b[i];
+   b[i] = b[i+1];
+   b[i+1] = a;
+  }
+  if (i == j-2)
+  {
+   i = -1;
+   j--;
+  }
  }
- else
+ for ( i = 0; i < 10; i++)
  {
-   printf("密钥不安全，请重新输入\n");
+  printf("%d ",b[i]);
  }
  return 0;
 }
