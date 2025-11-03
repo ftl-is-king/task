@@ -1,35 +1,22 @@
 //202510111315
 //715786526@qq.com
 //张福君
-#include <stdio.h>
+#include<stdio.h>
+int x(int a,int b,int c,int d,int e);
 int main()
 {
- int i = 0;
- int huashu[4];
- int shuzi = 99;
- char shuzu[4];
- int sum;
- int j = 0;
- while(i < 900)
+ int i;
+ int y[5];
+ for ( i = 0; i < 5; i++)
  {
-    i++;
-    shuzi++;
-    sprintf(shuzu,"%d",shuzi);
-    sum = (shuzu[0] - '0')*(shuzu[0] - '0')*(shuzu[0] - '0');
-    sum = sum+(shuzu[1] - '0')*(shuzu[1] - '0')*(shuzu[1] - '0');
-    sum = sum+(shuzu[2] - '0')*(shuzu[2] - '0')*(shuzu[2] - '0');
-    if(sum == shuzi)
-    {
-      huashu[j] = shuzi;
-      j++;
-    }
-}
-i = 0;
-while(i < 3 )
-{
-    printf("%d ",huashu[i]);
-    i++;
-}
-printf("%d",huashu[3]);
+  scanf("%d",&y[i]);
+ }
+ printf("%d",x(y[0],y[1],y[2],y[3],y[4]));
  return 0;
+}
+int x(int a,int b,int c,int d,int e)
+{
+ int m = 0;
+ m = a*a+b*b+c*c+d*d+e*e;
+ return m;
 }
