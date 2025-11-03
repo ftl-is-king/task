@@ -1,23 +1,39 @@
 //202510111315
 //715786526@qq.com
 //张福君
-#include <stdio.h>
+#include<stdio.h>
+int sum(int x[],int a);
+int product(int y[],int b);
+
 int main()
 {
- int shuzu[5];
- int j = 0;
- int i = 0;
- int shuzi = 0;
- for ( i = 0; j < 5; i++)
+ int i;
+ int shuru[5];
+ for ( i = 0; i < 5; i++)
  {
-   printf("请输入\n");
-   scanf("%d",&shuzi);
-   if (shuzi % 2 == 0)
-   {
-    shuzu[j] = shuzi;
-    j ++;
-   }
+  scanf("%d",&shuru[i]);
+ }
+ printf("%d %d",sum(shuru,i),product(shuru,i));
 }
- printf("%d %d %d %d %d\n",shuzu[0],shuzu[1],shuzu[2],shuzu[3],shuzu[4]);
- return 0;
+int sum(int x[],int a)
+{
+ int i;
+ int s = 0;
+ for ( i = 0; i < a; i++)
+ {
+  s = s + x[i];
+ }
+ return s;
 }
+int product(int y[],int b)
+{
+ int i;
+ int p = 1;
+ for ( i = 0; i < b; i++)
+ {
+  p = p * y[i];
+ }
+ return p;
+}
+
+
