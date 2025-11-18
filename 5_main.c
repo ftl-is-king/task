@@ -23,9 +23,9 @@ int main()
 void plus(int *a,int b)
 {   
     int i;
-    for ( i = 0; i < b-1; i++)
+    for ( i = b; i > 1; i--)
     {
-    *(a+(b-i)) = *(a+(b-i-1));
+     *(a+(i-1)) = *(a+(i-2));
     }  
     *a = 0;
 }
