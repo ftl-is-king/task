@@ -1,48 +1,29 @@
 //202510111315
 //715786526@qq.com
 //张福君
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
- int shuzu[3][3];
- int a = -1;
- int b = 0;
- int j;
- for(j = 0;j < 9;j++)
- {
-  if(a < 2)
-  {
-    a++;
-  }
-  scanf("%d",&shuzu[a][b]);
-  if(a == 2)
-  {
-    a = -1;
-    b++;
-  }
- }
- a = -1;
- b = 0;
- for(j = 0;j < 9;j++)
- {
-  if(a < 2)
-  {
-    a++;
-  }
-  if(a == 2)
-  {
-   printf("%d",shuzu[b][a]);
-  }
-  else
-  {
-   printf("%d ",shuzu[b][a]);
-  }
-  if(a == 2)
-  {
-    printf("\n");
-    a = -1;
-    b++;
-  }
- }
- return 0;
+    // int a;
+    // scanf("%d",&a);
+    // int* b = &a;
+    // *b = *b + 10;
+    // printf("%d,%d",a,*b);
+    // return 0;----------------------------作业1
+    int arr[5];
+    int i;
+    for (i = 0; i < 5; i++)
+    {
+            scanf("%d", &arr[i]);
+    }
+    int(*p)[5] = &arr;
+    for ( i = 0; i < 5; i++)
+    {
+       arr[i] = (*(p + i))*2;
+    }
+    for ( i = 0; i < 5; i++)
+    {
+      printf("%d ", arr[i]);
+    }
+    return 0;
 }
