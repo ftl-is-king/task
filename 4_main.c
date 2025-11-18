@@ -1,18 +1,30 @@
 //202510111315
 //715786526@qq.com
 //张福君
-#include<stdio.h>
-int x(int a,int b,int c,int d,int e);
+#include <stdio.h>
+void plus(int *a);
 int main()
 {
  int i;
- int y[5] = {1,2,3,4,5};
- printf("%d",x(y[0],y[1],y[2],y[3],y[4]));
+ int arr[5];
+ for ( i = 0; i < 5; i++)
+ {
+  scanf("%d", &arr[i]);
+ }
+ plus(&arr[0]);
+ for ( i = 0; i < 5; i++)
+ {
+  printf("%d ", arr[i]);
+ }
  return 0;
 }
-int x(int a,int b,int c,int d,int e)
-{
- int m = 0;
- m = a*a+b*b+c*c+d*d+e*e;
- return m;
+
+void plus(int *a)
+{   
+    int i;
+    for ( i = 0; i < 5; i++)
+    {
+    *(a+i) = *(a+i) + 1;
+    }  
 }
+    
