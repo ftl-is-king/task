@@ -1,9 +1,6 @@
 //202510111315
 //715786526@qq.com
 //张福君
-//202510111315
-//715786526@qq.com
-//张福君
 #include <stdio.h>
 void swap(int *a,int *b);
 int main()
@@ -32,6 +29,7 @@ int main()
     // return 0;--------------------------作业2
   int x = 3;
   int y = 5;
+  scanf("%d %d",&x,&y);
   swap(&x,&y);
   return 0;
 }
