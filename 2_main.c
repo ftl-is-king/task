@@ -19,7 +19,7 @@ int main()
     int(*p)[5] = &arr;
     for ( i = 0; i < 5; i++)
     {
-       arr[i] = (*(p + i))*2;
+       arr[i] = (*p)[i]*2;
     }
     for ( i = 0; i < 5; i++)
     {
