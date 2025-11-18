@@ -40,5 +40,5 @@ void swap(int *a,int *b)
  int c = *a;
  *a = *b;
  *b = c;
- printf("%d,%d",*a,*b);
+ printf("%d %d",*a,*b);
 }
